@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LeaderboardComponent } from './pages/leaderboard/leaderboard.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
 import { ChallengeComponent } from './pages/challenge/challenge.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
     declarations: [
@@ -19,6 +20,7 @@ import { ChallengeComponent } from './pages/challenge/challenge.component';
         LeaderboardComponent,
         CalendarComponent,
         ChallengeComponent,
+        PageNotFoundComponent,
     ],
     imports: [BrowserModule, AppRoutingModule],
     providers: [],
