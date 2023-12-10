@@ -16,3 +16,24 @@ h2 {
     padding: 0;
     color: #2a9d8f;
 }
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    color: #2a9d8f;
+}
+
+a {
+    color: #e76f51;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.highlight {
+    color: #e76f51;
+}
