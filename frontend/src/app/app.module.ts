@@ -8,6 +8,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LeaderboardComponent } from './pages/leaderboard/leaderboard.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
+import { ChallengeComponent } from './pages/challenge/challenge.component';
 
 @NgModule({
     declarations: [
@@ -17,6 +18,7 @@ import { CalendarComponent } from './pages/calendar/calendar.component';
         NavbarComponent,
         LeaderboardComponent,
         CalendarComponent,
+        ChallengeComponent,
     ],
     imports: [BrowserModule, AppRoutingModule],
     providers: [],
