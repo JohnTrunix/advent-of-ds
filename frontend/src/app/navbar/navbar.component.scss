@@ -1,6 +1,7 @@
 .nav-bar-wrapper {
   border-bottom: 1px solid #e5e5e5;
   padding: 0 10%;
+  z-index: 100;
 }
 
 .nav-bar {
@@ -35,6 +36,7 @@
     a {
       text-decoration: none;
       color: #000000;
+      margin: 0 1rem;
 
       &:hover {
         color: inherit;
