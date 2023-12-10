@@ -3,5 +3,4 @@ export interface ChallgenesModel {
     name: string;
     date: Date;
     tags: string[];
-    description: string;
 }
