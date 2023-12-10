@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { ChallgenesModel } from '../../models/challgenes.model';
+import { ChallengesModel } from '../../models/challengesModel';
 
 @Component({
     selector: 'app-calendar',
@@ -8,7 +8,7 @@ import { ChallgenesModel } from '../../models/challgenes.model';
     styleUrl: './calendar.component.scss',
 })
 export class CalendarComponent {
-    challenges: ChallgenesModel[] = [
+    challenges: ChallengesModel[] = [
         {
             id: 1,
             name: 'Challenge 1',
