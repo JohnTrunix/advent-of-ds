@@ -6,6 +6,7 @@ import { LeaderboardComponent } from './pages/leaderboard/leaderboard.component'
 import { AboutComponent } from './pages/about/about.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
 import { ChallengeComponent } from './pages/challenge/challenge.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -14,7 +15,7 @@ const routes: Routes = [
     { path: 'leaderboard', component: LeaderboardComponent },
     { path: 'about', component: AboutComponent },
     { path: 'challenge', component: ChallengeComponent },
-    { path: '**', component: HomeComponent },
+    { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
