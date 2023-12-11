@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { ChallengesModel } from '../../models/challengesModel';
+import { ChallengesModel } from '../../models/challenges.model';
 
 @Component({
     selector: 'app-calendar',
