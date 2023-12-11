@@ -3,6 +3,7 @@ litestar[pydantic]~=2.4.3
 
 # testing
 pytest~=7.4.3
+pytest-cov~=4.1.0
 
 # linting and formatting
 mypy
