@@ -4,14 +4,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../environments/environment';
 import { LeaderboardModel } from '../../models/leaderboard.model';
 
 @Injectable({
     providedIn: 'root',
 })
 export class LeaderboardService {
-    private leaderboardUrl = environment.apiBaseUrl + '/leaderboard';
+    private leaderboardUrl = environment.apiBaseUrl + 'leaderboard';
     httpOptions = {
         headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     };
