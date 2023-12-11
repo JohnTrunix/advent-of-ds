@@ -1,6 +1,4 @@
-import { EnvironmentInterface } from './environment.interface';
-
-export const environment: EnvironmentInterface = {
-    production: true,
+export const environment = {
+    production: false,
     apiBaseUrl: '',
 };
