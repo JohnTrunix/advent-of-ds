@@ -1,4 +1,4 @@
-litestar~=2.4.3
+litestar[standard]~=2.4.3
 litestar[pydantic]~=2.4.3
 
 # testing
