@@ -2,6 +2,7 @@ import json
 from datetime import datetime
 
 from litestar import Litestar, get
+from litestar.config.cors import CORSConfig
 
 from .models.leaderboard import Leaderboard
 
@@ -35,5 +36,8 @@ async def leaderboard() -> Leaderboard:
     return board
 
 
+cors_config = CORSConfig(allow_origins=["http://localhost:4200/*"])
 # Litestar App
-app: Litestar = Litestar(route_handlers=[index, leaderboard], debug=True)
+app: Litestar = Litestar(
+    route_handlers=[index, leaderboard], cors_config=cors_config, debug=True
+)
