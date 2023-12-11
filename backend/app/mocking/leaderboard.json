@@ -23,88 +23,88 @@
     "score": 39,
     "coffees": 1
   },
-    {
-        "id": 100012,
-        "name": "Sarah",
-        "score": 48,
-        "coffees": 4
-    },
-    {
-        "id": 100345,
-        "name": "Paul",
-        "score": 44,
-        "coffees": 3
-    },
-    {
-        "id": 100678,
-        "name": "Mary",
-        "score": 41,
-        "coffees": 2
-    },
-    {
-        "id": 100901,
-        "name": "John",
-        "score": 47,
-        "coffees": 4
-    },
-    {
-        "id": 100234,
-        "name": "Lisa",
-        "score": 50,
-        "coffees": 5
-    },
-    {
-        "id": 100567,
-        "name": "David",
-        "score": 45,
-        "coffees": 3
-    },
-    {
-        "id": 100890,
-        "name": "Julia",
-        "score": 46,
-        "coffees": 4
-    },
-    {
-        "id": 100123,
-        "name": "Michael",
-        "score": 42,
-        "coffees": 2
-    },
-    {
-        "id": 100456,
-        "name": "Anna",
-        "score": 53,
-        "coffees": 5
-    },
-    {
-        "id": 100789,
-        "name": "Chris",
-        "score": 39,
-        "coffees": 1
-    },
-    {
-        "id": 100012,
-        "name": "Sarah",
-        "score": 48,
-        "coffees": 4
-    },
-    {
-        "id": 100345,
-        "name": "Paul",
-        "score": 44,
-        "coffees": 3
-    },
-    {
-        "id": 100678,
-        "name": "Mary",
-        "score": 41,
-        "coffees": 2
-    },
-    {
-        "id": 100901,
-        "name": "John",
-        "score": 47,
-        "coffees": 23
-    }
+  {
+    "id": 100012,
+    "name": "Sarah",
+    "score": 48,
+    "coffees": 4
+  },
+  {
+    "id": 100345,
+    "name": "Paul",
+    "score": 44,
+    "coffees": 3
+  },
+  {
+    "id": 100678,
+    "name": "Mary",
+    "score": 41,
+    "coffees": 2
+  },
+  {
+    "id": 100901,
+    "name": "John",
+    "score": 47,
+    "coffees": 4
+  },
+  {
+    "id": 100234,
+    "name": "Lisa",
+    "score": 50,
+    "coffees": 5
+  },
+  {
+    "id": 100567,
+    "name": "David",
+    "score": 45,
+    "coffees": 3
+  },
+  {
+    "id": 100890,
+    "name": "Julia",
+    "score": 46,
+    "coffees": 4
+  },
+  {
+    "id": 100123,
+    "name": "Michael",
+    "score": 42,
+    "coffees": 2
+  },
+  {
+    "id": 100456,
+    "name": "Anna",
+    "score": 53,
+    "coffees": 5
+  },
+  {
+    "id": 100789,
+    "name": "Chris",
+    "score": 39,
+    "coffees": 1
+  },
+  {
+    "id": 100012,
+    "name": "Sarah",
+    "score": 48,
+    "coffees": 4
+  },
+  {
+    "id": 100345,
+    "name": "Paul",
+    "score": 44,
+    "coffees": 3
+  },
+  {
+    "id": 100678,
+    "name": "Mary",
+    "score": 41,
+    "coffees": 2
+  },
+  {
+    "id": 100901,
+    "name": "John",
+    "score": 47,
+    "coffees": 23
+  }
 ]
