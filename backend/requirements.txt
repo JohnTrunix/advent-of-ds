@@ -1,0 +1,12 @@
+litestar[standard]~=2.4.3
+litestar[pydantic]~=2.4.3
+
+# testing
+pytest~=7.4.3
+pytest-cov~=4.1.0
+
+# linting and formatting
+mypy
+black~=23.11.0
+ruff~=0.1.7
+isort~=5.13.0
