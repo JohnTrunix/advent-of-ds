@@ -1,5 +1,7 @@
-litestar[standard]~=2.4.3
-litestar[pydantic]~=2.4.3
+litestar[standard]~=2.4.4
+litestar[pydantic]~=2.4.4
+litestar[sqlalchemy]~=2.4.4
+sqlalchemy~=2.0.23
 
 # testing
 pytest~=7.4.3
