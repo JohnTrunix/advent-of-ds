@@ -14,6 +14,8 @@ export class LeaderboardComponent implements OnInit {
         request_time: new Date(),
     };
 
+    constructor(private leaderboardService: LeaderboardService) {}
+
     ngOnInit() {
         this.getLeaderboard();
     }
@@ -23,6 +25,4 @@ export class LeaderboardComponent implements OnInit {
             this.leaderboard = leaderboard;
         });
     }
-
-    constructor(private leaderboardService: LeaderboardService) {}
 }
