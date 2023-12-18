@@ -23,7 +23,7 @@ async def leaderboard() -> Leaderboard:
 
     :return: sorted leaderboard
     """
-    with open("src/mocking/leaderboard.json", "r") as file:
+    with open("app/mocking/leaderboard.json", "r") as file:
         board: Leaderboard = Leaderboard(
             entries=json.load(file), request_time=datetime.now()
         )
