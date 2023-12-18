@@ -1,23 +1,13 @@
 -- Insert mock data into the users table
-INSERT INTO users (name, score, coffees)
+INSERT INTO users (github_id, username, email, avatar_url, profile_url, oauth_token)
 VALUES
-    ('Max', 57, 3),
-    ('Michael', 42, 2),
-    ('Anna', 53, 5),
-    ('Chris', 39, 1),
-    ('Sarah', 48, 4),
-    ('Paul', 44, 3),
-    ('Mary', 41, 2),
-    ('John', 47, 4),
-    ('Lisa', 50, 5),
-    ('David', 45, 3),
-    ('Julia', 46, 4),
-    ('Alex', 55, 2),
-    ('Emma', 38, 3),
-    ('Robert', 49, 5),
-    ('Olivia', 43, 1),
-    ('Daniel', 52, 4),
-    ('Sophia', 40, 2),
-    ('James', 51, 3),
-    ('Emily', 47, 5),
-    ('Matthew', 42, 1);
+    ('id1', 'max.hello', 'max@muster', 'https://picsum.photos/200', 'https://github.com/max.hello', 'token_123'),
+    ('id2', 'john.doe', 'john@example.com', 'https://picsum.photos/200', 'https://github.com/john.doe', 'token_456'),
+    ('id3', 'jane.smith', 'jane@example.com', 'https://picsum.photos/200', 'https://github.com/jane.smith', 'token_789'),
+    ('id4', 'alice', 'alice@example.com', 'https://picsum.photos/200', 'https://github.com/alice', 'token_abc'),
+    ('id5', 'bob', 'bob@example.com', 'https://picsum.photos/200', 'https://github.com/bob', 'token_def'),
+    ('id6', 'charlie', 'charlie@example.com', 'https://picsum.photos/200', 'https://github.com/charlie', 'token_ghi'),
+    ('id7', 'david', 'david@example.com', 'https://picsum.photos/200', 'https://github.com/david', 'token_jkl'),
+    ('id8', 'emma', 'emma@example.com', 'https://picsum.photos/200', 'https://github.com/emma', 'token_mno'),
+    ('id9', 'frank', 'frank@example.com', 'https://picsum.photos/200', 'https://github.com/frank', 'token_pqr'),
+    ('id10', 'grace', 'grace@example.com', 'https://picsum.photos/200', 'https://github.com/grace', 'token_stu');
