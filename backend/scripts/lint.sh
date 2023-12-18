@@ -3,7 +3,7 @@
 set -e
 set -x
 
-mypy src tests
-ruff src tests --fix
-black src tests
-isort src tests
+mypy app tests
+ruff app tests --fix
+black app tests
+isort app tests
