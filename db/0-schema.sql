@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS users (
 -- create challenges table which stores challenge information
 CREATE TABLE IF NOT EXISTS challenges (
     uuid uuid DEFAULT uuid_generate_v4 () PRIMARY KEY,
+    day_id INTEGER NOT NULL UNIQUE,
     title VARCHAR(255) NOT NULL,
     tags VARCHAR(64)[] NOT NULL,
     open_at TIMESTAMP NOT NULL,

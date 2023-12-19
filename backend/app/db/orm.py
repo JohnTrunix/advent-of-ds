@@ -1,4 +1,4 @@
-from sqlalchemy import BOOLEAN, TIMESTAMP, ForeignKey, Interval, String
+from sqlalchemy import BOOLEAN, TIMESTAMP, ForeignKey, Interval, String, Integer
 from sqlalchemy.dialects.postgresql import ARRAY, UUID
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 from sqlalchemy.sql import func
@@ -49,6 +49,7 @@ class Challenge(Base):
         primary_key=True,
         server_default=func.uuid_generate_v4(),
     )
+    day_id: Mapped[int] = mapped_column(Integer, nullable=False, unique=True)
     title: Mapped[str] = mapped_column(String(255), nullable=False)
     tags: Mapped[ARRAY] = mapped_column(ARRAY(String(64)), nullable=False)
     open_at: Mapped[TIMESTAMP] = mapped_column(TIMESTAMP, nullable=False)
