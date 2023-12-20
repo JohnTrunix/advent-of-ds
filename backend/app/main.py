@@ -3,12 +3,13 @@ from enum import Enum
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.routes import leaderboard
+from app.routes import challenges, leaderboard
 
 
 class Tags(Enum):
     root = "root"
     leaderboard = "leaderboard"
+    challenges = "challenges"
 
 
 origins: list[str] = [
@@ -21,6 +22,7 @@ app: FastAPI = FastAPI(
     version="0.1.0",
     openapi_tags=[
         {"name": Tags.root, "description": "Root endpoint"},
+        {"name": Tags.challenges, "description": "Challenges endpoint"},
         {"name": Tags.leaderboard, "description": "Leaderboard endpoint"},
     ],
 )
@@ -33,6 +35,7 @@ app.add_middleware(
 )
 
 app.include_router(leaderboard.router, prefix="/v1", tags=[Tags.leaderboard])
+app.include_router(challenges.router, prefix="/v1", tags=[Tags.challenges])
 
 
 @app.get("/", tags=[Tags.root])
