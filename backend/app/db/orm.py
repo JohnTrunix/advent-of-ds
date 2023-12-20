@@ -1,4 +1,4 @@
-from sqlalchemy import BOOLEAN, TIMESTAMP, ForeignKey, Interval, String, Integer
+from sqlalchemy import BOOLEAN, TIMESTAMP, ForeignKey, Integer, Interval, String
 from sqlalchemy.dialects.postgresql import ARRAY, UUID
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 from sqlalchemy.sql import func
