@@ -1,13 +1,11 @@
 <h2>Leaderboard</h2>
 <ul class="leaderboard">
-    <li class="leaderboard__entry" *ngFor="let user of leaderboard.entries">
-        <span class="leaderboard__entry-name">{{ user.name }}</span>
+    <li class="leaderboard__entry" *ngFor="let user of leaderboard">
+        <span class="leaderboard__entry-name">{{ user.username }}</span>
         <span class="leaderboard__entry-scores">
             <span class="leaderboard__entry-score"> {{ user.score }}x⭐</span>
-            <span class="leaderboard__entry-coffees">
-                {{ user.coffees }}x🧉
-            </span>
+            <span class="leaderboard__entry-coffees"> {{ user.mate }}x🧉 </span>
         </span>
     </li>
 </ul>
-<div class="leaderboard__total">Total: {{ leaderboard.entries.length }}</div>
+<div class="leaderboard__total">Total: {{ leaderboard.length }}</div>

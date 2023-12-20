@@ -1,11 +1,8 @@
-export interface LeaderboardEntryModel {
-    id: number;
-    name: string;
-    score: number;
-    coffees: number;
-}
-
 export interface LeaderboardModel {
-    entries: LeaderboardEntryModel[];
-    request_time: Date;
+    user_uuid: string;
+    username: string;
+    profile_url: string;
+    score: number;
+    mate: number;
+    total: number;
 }
