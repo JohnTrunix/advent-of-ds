@@ -33,9 +33,9 @@ export class ChallengesService {
     /**
      * Get challenge by uuid
      */
-    getChallenge(uuid: string): Observable<ChallengeModel> {
+    getChallenge(id: number): Observable<ChallengeModel> {
         return this.http
-            .get<ChallengeModel>(this.challengesUrl + '/' + uuid)
+            .get<ChallengeModel>(this.challengesUrl + '/' + id)
             .pipe(catchError(this.handleError<ChallengeModel>('getChallenge')));
     }
 

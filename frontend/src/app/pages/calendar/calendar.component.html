@@ -1,7 +1,7 @@
 <h2>Calendar</h2>
 <p>You find here the daily challenges for the Advent of Data Science 2024.</p>
 <div *ngFor="let challenge of this.challenges">
-    <a routerLink="/challenge" [queryParams]="{ id: challenge.uuid }">
+    <a routerLink="/challenge" [queryParams]="{ day: challenge.day_id }">
         <div class="challenge">
             <div class="challenge__title">
                 <span class="challenge__title--text">

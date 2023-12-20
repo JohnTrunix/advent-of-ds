@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem 0 0.5rem 0;
+  border-bottom: 1px dashed #000000;
+
+  .header__creator{
+    color: #e76f51;
+  }
+
+  .header__tags {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 0 0 0 1rem;
+
+      .header__tag {
+        padding: 0 0.25rem;
+        color: #2a9d8f;
+      }
+    }
+  }
