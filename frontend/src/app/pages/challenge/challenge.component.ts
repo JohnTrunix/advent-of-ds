@@ -32,7 +32,6 @@ export class ChallengeComponent implements OnInit {
         });
 
         if (this.uuid) {
-            console.log(this.uuid);
             this.challengesService
                 .getChallenge(this.uuid)
                 .subscribe(challenge => {

@@ -1,5 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import {
+    HttpClient,
+    HttpErrorResponse,
+    HttpHeaders,
+} from '@angular/common/http';
+import { Router } from '@angular/router';
 
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
@@ -12,17 +17,20 @@ import { ChallengeModel } from '../../models/challenges.model';
 })
 export class ChallengesService {
     private challengesUrl = environment.apiBaseUrl + 'v1/challenges';
-    httpOptions = {
+    private httpOptions = {
         headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     };
-    constructor(private http: HttpClient) {}
+    constructor(
+        private http: HttpClient,
+        private router: Router
+    ) {}
 
     /**
      * Get challenges
      */
     getChallenges(): Observable<ChallengeModel[]> {
         return this.http
-            .get<ChallengeModel[]>(this.challengesUrl)
+            .get<ChallengeModel[]>(this.challengesUrl, this.httpOptions)
             .pipe(
                 catchError(
                     this.handleError<ChallengeModel[]>('getChallenges', [])
@@ -35,7 +43,10 @@ export class ChallengesService {
      */
     getChallenge(uuid: string): Observable<ChallengeModel> {
         return this.http
-            .get<ChallengeModel>(this.challengesUrl + '/' + uuid)
+            .get<ChallengeModel>(
+                this.challengesUrl + '/' + uuid,
+                this.httpOptions
+            )
             .pipe(catchError(this.handleError<ChallengeModel>('getChallenge')));
     }
 
@@ -46,9 +57,11 @@ export class ChallengesService {
      * @param result - optional value to return as the observable result
      */
     private handleError<T>(operation: string = 'operation', result?: T) {
-        return (error: ErrorEvent): Observable<T> => {
+        return (error: HttpErrorResponse): Observable<T> => {
             console.error(operation + ' failed');
-            console.error(error);
+            if (error.status === 404) {
+                this.router.navigate(['/404']).then();
+            }
             return of(result as T);
         };
     }
