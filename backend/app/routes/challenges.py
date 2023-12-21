@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
 from app.db import crud, schema
@@ -17,5 +17,11 @@ def get_challenges(db: Session = Depends(get_db)):
 
 @router.get("/{day_id}", response_model=schema.Challenge)
 def get_challenge(day_id: str, db: Session = Depends(get_db)):
-    challenge = crud.get_challenge_by_day_id(db, day_id)
+    challenge = crud.get_challenge_by_uuid(db, day_id)
+
+    if challenge is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="Challenge not found"
+        )
+
     return challenge

@@ -9,10 +9,8 @@ def get_challenges(db: Session) -> list[schema.Challenge]:
     return result  # type: ignore
 
 
-def get_challenge_by_day_id(db: Session, day_id: str) -> schema.Challenge:
-    result = (
-        db.query(orm.Challenge).filter(orm.Challenge.day_id == day_id).first()
-    )
+def get_challenge_by_uuid(db: Session, uuid: str) -> schema.Challenge:
+    result = db.query(orm.Challenge).filter(orm.Challenge.uuid == uuid).first()
     return result  # type: ignore
 
 
