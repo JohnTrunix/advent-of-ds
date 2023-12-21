@@ -1,7 +1,11 @@
 name: AoDS Workflow
 on:
-  - push
-  - pull_request
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   test:
@@ -29,9 +33,9 @@ jobs:
       - name: test frontend
         working-directory: frontend
         run: |
-          ng lint
-          ng build --prod
-          npm run ng test -- --no-watch --no-progress --watch=false --code-coverage --browsers=ChromeHeadlessCI
+          npm run lint
+          npm run build --prod
+          npm run test -- --no-watch --no-progress --watch=false --code-coverage --browsers=ChromeHeadlessCI
 
       - name: test backend
         working-directory: backend
