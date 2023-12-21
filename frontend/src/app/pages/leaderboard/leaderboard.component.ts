@@ -9,10 +9,7 @@ import { LeaderboardService } from '../../services/api/leaderboard.service';
     styleUrl: './leaderboard.component.scss',
 })
 export class LeaderboardComponent implements OnInit {
-    leaderboard: LeaderboardModel = {
-        entries: [],
-        request_time: new Date(),
-    };
+    leaderboard: LeaderboardModel[] = [];
 
     constructor(private leaderboardService: LeaderboardService) {}
 

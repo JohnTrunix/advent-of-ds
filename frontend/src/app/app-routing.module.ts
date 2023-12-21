@@ -14,8 +14,9 @@ const routes: Routes = [
     { path: 'calendar', component: CalendarComponent },
     { path: 'leaderboard', component: LeaderboardComponent },
     { path: 'about', component: AboutComponent },
-    { path: 'challenge', component: ChallengeComponent },
-    { path: '**', component: PageNotFoundComponent },
+    { path: 'challenge/:uuid', component: ChallengeComponent },
+    { path: '404', component: PageNotFoundComponent },
+    { path: '**', redirectTo: '404', pathMatch: 'full' },
 ];
 
 @NgModule({

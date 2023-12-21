@@ -1,6 +1,5 @@
 [tool.mypy]
 check_untyped_defs = true
-plugins = ["pydantic.mypy"]
 
 [tool.black]
 line-length = 80

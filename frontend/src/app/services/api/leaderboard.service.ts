@@ -11,8 +11,8 @@ import { LeaderboardModel } from '../../models/leaderboard.model';
     providedIn: 'root',
 })
 export class LeaderboardService {
-    private leaderboardUrl = environment.apiBaseUrl + 'leaderboard';
-    httpOptions = {
+    private leaderboardUrl = environment.apiBaseUrl + 'v1/leaderboard';
+    private httpOptions = {
         headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     };
     constructor(private http: HttpClient) {}
@@ -20,15 +20,14 @@ export class LeaderboardService {
     /**
      * Get leaderboard
      */
-    getLeaderboard(): Observable<LeaderboardModel> {
-        return this.http.get<LeaderboardModel>(this.leaderboardUrl).pipe(
-            catchError(
-                this.handleError<LeaderboardModel>('getLeaderboard', {
-                    entries: [],
-                    request_time: new Date(),
-                })
-            )
-        );
+    getLeaderboard(): Observable<LeaderboardModel[]> {
+        return this.http
+            .get<LeaderboardModel[]>(this.leaderboardUrl, this.httpOptions)
+            .pipe(
+                catchError(
+                    this.handleError<LeaderboardModel[]>('getLeaderboard', [])
+                )
+            );
     }
 
     /**
