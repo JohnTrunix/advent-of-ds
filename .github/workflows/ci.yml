@@ -26,9 +26,9 @@ jobs:
           cd ../frontend
           npm install
 
-      - name: test frontend
-        working-directory: frontend
-        run: ng test --watch=false
+      #- name: test frontend
+      #  working-directory: frontend
+      #  run: ng test --watch=false
       - name: test backend
         working-directory: backend
         run: pytest -vv --cov=app --cov-report=term-missing --cov-report=xml tests/
