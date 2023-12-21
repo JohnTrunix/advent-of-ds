@@ -34,7 +34,7 @@ jobs:
         working-directory: frontend
         run: |
           npm run lint
-          npm run build --prod
+          npm run build
           npm run test -- --no-watch --no-progress --watch=false --code-coverage --browsers=ChromeHeadlessCI
 
       - name: test backend

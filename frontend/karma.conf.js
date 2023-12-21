@@ -19,7 +19,8 @@ module.exports = function (config) {
         // for example, you can disable the random execution with `random: false`
         // or set a specific seed with `seed: 4321`
       },
-      clearContext: false // leave Jasmine Spec Runner output visible in browser
+      clearContext: false, // leave Jasmine Spec Runner output visible in browser
+      random: false
     },
     jasmineHtmlReporter: {
       suppressAll: true // removes the duplicated traces
@@ -36,6 +37,10 @@ module.exports = function (config) {
     browsers: ['Chrome'],
     restartOnFileChange: true,
     customLaunchers: {
+      ChromeDebug: {
+        base: 'Chrome',
+        flags: ['--remote-debugging-port=9333']
+      },
       ChromeHeadlessCI: {
         base: 'ChromeHeadless',
         flags: ['--no-sandbox']
