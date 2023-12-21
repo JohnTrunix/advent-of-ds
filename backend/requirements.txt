@@ -3,10 +3,10 @@ fastapi~=0.105.0
 sqlalchemy~=2.0.23
 psycopg2~=2.9.9
 
-
 # testing
 pytest~=7.4.3
 pytest-cov~=4.1.0
+httpx~=0.26.0
 
 # linting and formatting
 mypy

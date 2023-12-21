@@ -7,7 +7,7 @@
     "lint": "ng lint --fix",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test --browsers=ChromeDebug"
   },
   "private": true,
   "dependencies": {

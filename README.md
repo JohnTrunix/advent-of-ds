@@ -1,5 +1,7 @@
 # Advent of DS @ZHAW SoE
 
+[![codecov](https://codecov.io/gh/JohnTrunix/advent-of-ds/graph/badge.svg?token=TVLQ1YBI83)](https://codecov.io/gh/JohnTrunix/advent-of-ds)
+
 Welcome to the «Advent of Data Science» project.
 
 **If you want to contribute check out the guidelines**
