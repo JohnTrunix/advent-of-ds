@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { ChallengeModel } from '../../models/challenges.model';
 import { ChallengesService } from '../../services/api/challenges.service';
@@ -10,10 +10,10 @@ import { ChallengesService } from '../../services/api/challenges.service';
     styleUrl: './challenge.component.scss',
 })
 export class ChallengeComponent implements OnInit {
-    day_id: number = -1;
+    uuid: string | null = null;
     challenge: ChallengeModel = {
         uuid: '',
-        day_id: 0,
+        day_id: -100,
         title: '',
         tags: [],
         open_at: new Date(),
@@ -22,16 +22,24 @@ export class ChallengeComponent implements OnInit {
 
     constructor(
         private route: ActivatedRoute,
+        private router: Router,
         private challengesService: ChallengesService
     ) {}
 
     ngOnInit() {
-        this.getChallenge();
-    }
-
-    getChallenge() {
-        this.challengesService.getChallenge(17).subscribe(challenge => {
-            this.challenge = challenge;
+        this.route.paramMap.subscribe(params => {
+            this.uuid = params.get('uuid');
         });
+
+        if (this.uuid) {
+            console.log(this.uuid);
+            this.challengesService
+                .getChallenge(this.uuid)
+                .subscribe(challenge => {
+                    this.challenge = challenge;
+                });
+        } else {
+            this.router.navigate(['/404']).then();
+        }
     }
 }
