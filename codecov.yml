@@ -1,0 +1,18 @@
+codecov:
+  require_ci_to_pass: false
+  
+comment:
+  behavior: new
+  hide_project_coverage: false
+  layout: diff, flags, files
+  
+component_management:
+  individual_components:
+    - component_id: frontend
+      name: frontend
+      paths:
+        - frontend/**
+    - component_id: backend
+      name: backend
+      paths:
+        - backend/**
