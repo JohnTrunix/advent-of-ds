@@ -3,7 +3,7 @@
 set -e
 set -x
 
-mypy app
-ruff app --fix
-black app
-isort app
+mypy app tests
+ruff app tests --fix
+black app tests
+isort app tests
