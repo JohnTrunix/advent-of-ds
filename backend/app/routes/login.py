@@ -33,5 +33,4 @@ async def github_code(
             url=settings.OAUTH_TOKEN_URL, params=params, headers=headers
         )
     response = response.json()
-    print(response)
     return RedirectResponse(settings.OAUTH_REDIRECT_URL, status_code=302)
