@@ -1,7 +1,5 @@
+<div class="DEV" *ngIf="!isInProduction">🚧 Development Environment 🚧</div>
 <app-navbar></app-navbar>
 <div class="router-outlet--wrapper">
-    <div class="DEV" *ngIf="!isInProduction">
-        🚧 Development Environment! 🚧
-    </div>
     <router-outlet></router-outlet>
 </div>
