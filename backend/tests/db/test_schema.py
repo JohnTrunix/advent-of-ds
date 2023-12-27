@@ -19,7 +19,7 @@ def test_challenge():
     assert challenge.tags == ["test", "challenge"]
     assert challenge.open_at
     assert challenge.created_by == "test"
-    assert challenge.Config.orm_mode
+    assert challenge.ConfigDict.from_attributes
 
 
 def test_leaderboard():
@@ -37,4 +37,4 @@ def test_leaderboard():
     assert leaderboard.score == 1
     assert leaderboard.mate == 1
     assert leaderboard.total == 2
-    assert leaderboard.Config.orm_mode
+    assert leaderboard.ConfigDict.from_attributes
