@@ -12,8 +12,8 @@ class Challenge(BaseModel):
     open_at: datetime
     created_by: str
 
-    class Config:
-        orm_mode = True
+    class ConfigDict:
+        from_attributes = True
 
 
 class Leaderboard(BaseModel):
@@ -24,5 +24,5 @@ class Leaderboard(BaseModel):
     mate: int
     total: int
 
-    class Config:
-        orm_mode = True
+    class ConfigDict:
+        from_attributes = True
