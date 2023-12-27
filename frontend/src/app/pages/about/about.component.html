@@ -1,1 +1,62 @@
 <h2>About</h2>
+<p>
+    Here you can find infos about the webapp, the rules and the scoring system.
+</p>
+<h3>Rules</h3>
+<p>
+    The rules are simple.
+    <span class="highlight">Don't break the webapp!</span> besides you should
+    follow along the following guidelines:
+</p>
+<ul>
+    <li>Don't use any automated tools to solve the challenges.</li>
+    <li>Don't use AI, as this challenges should refresh your know-how.</li>
+    <li>Don't share the solutions to other participants.</li>
+    <li>
+        Every challenge related information is in the challenge page, there are
+        no hidden information elsewhere (e.g. in the webapp source code)
+    </li>
+</ul>
+<h3>Scoring</h3>
+<p>
+    Every day there is a challenge which has two sub-challenges. For each
+    correct submission per sub-challenge you will get one ⭐ (<a
+        target="_blank"
+        href="https://en.wikipedia.org/wiki/Star"
+        >star</a
+    >).
+</p>
+<p>
+    By starting the challenge a timer gets started. If you manage to solve both
+    sub-challenges the timer gets terminated. The person with the shortest
+    solving time per day gets in addition a 🧉 (<a
+        target="_blank"
+        href="https://www.eltonymate.com/"
+        >mate</a
+    >).
+</p>
+<p>
+    The leaderboard gets calculated as
+    <span class="highlight">sum of stars + sum of mates.</span>
+</p>
+<h3>About the Webapp</h3>
+<p>
+    The source code of the webapp can be found on
+    <a target="_blank" href="https://github.com/JohnTrunix/advent-of-ds"
+        >Github</a
+    >. The webapp is written in JavaScript (Angular, TS), uses a FastAPI
+    (Python) backend and uses a PostgreSQL database. In addition to store the
+    challenges, a MongoDB is used.
+</p>
+<p>
+    As I like to exaggerate a bit, in addition to the stack above, the webapp is
+    deployed on a Kubernetes cluster and uses a CI/CD pipeline to deploy the
+    changes to the cluster. The cluster is hosted privately.
+</p>
+<small
+    >This project is licensed under the
+    <a target="_blank" href="https://www.gnu.org/licenses/gpl-3.0.html.en"
+        >GPL-3.0</a
+    >
+    license.</small
+>
