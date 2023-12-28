@@ -11,11 +11,11 @@
     border-bottom: 1px solid #ccc;
 
     &:nth-child(-n+3) {
-      color: #e76f51;
+      color: var(--accent-3-color);
     }
 
     &:hover {
-      background-color: #f1f1f1;
+      background-color: var(--hover-background-color);
     }
 
     &-link {
