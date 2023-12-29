@@ -11,6 +11,7 @@ import { LeaderboardComponent } from './pages/leaderboard/leaderboard.component'
 import { CalendarComponent } from './pages/calendar/calendar.component';
 import { ChallengeComponent } from './pages/challenge/challenge.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { NgOptimizedImage } from '@angular/common';
 
 @NgModule({
     declarations: [
@@ -23,7 +24,12 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
         ChallengeComponent,
         PageNotFoundComponent,
     ],
-    imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        NgOptimizedImage,
+    ],
     providers: [],
     bootstrap: [AppComponent],
 })

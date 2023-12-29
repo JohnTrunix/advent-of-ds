@@ -14,6 +14,16 @@
             >
             <a routerLink="/about" routerLinkActive="active">About</a>
         </div>
+        <div class="nav-bar__theme">
+            <button (click)="toggleTheme()">
+                <img
+                    [ngSrc]="themeIcon"
+                    alt="light theme"
+                    class="theme--light"
+                    height="18"
+                    width="18" />
+            </button>
+        </div>
         <div class="nav-bar__login">
             <a routerLink="/login" routerLinkActive="active">Login</a>
         </div>
