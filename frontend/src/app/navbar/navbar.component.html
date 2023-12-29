@@ -15,11 +15,10 @@
             <a routerLink="/about" routerLinkActive="active">About</a>
         </div>
         <div class="nav-bar__theme">
-            <button (click)="toggleTheme()">
+            <button (click)="themeService.toggleTheme()">
                 <img
-                    [attr.src]="themeIcon"
-                    alt="light theme"
-                    class="theme--light"
+                    [attr.src]="themeService.activeThemeIcon"
+                    [attr.alt]="themeService.activeTheme"
                     height="18"
                     width="18" />
             </button>
