@@ -14,7 +14,8 @@ class Tags(Enum):
 
 
 origins: list[str] = [
-    "http://localhost:4200",
+    # "http://localhost:4200",
+    "*",
 ]
 
 app: FastAPI = FastAPI(
