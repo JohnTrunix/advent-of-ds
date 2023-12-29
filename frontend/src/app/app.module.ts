@@ -13,7 +13,6 @@ import { ChallengeComponent } from './pages/challenge/challenge.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { NgOptimizedImage } from '@angular/common';
 
-
 @NgModule({
     declarations: [
         AppComponent,
