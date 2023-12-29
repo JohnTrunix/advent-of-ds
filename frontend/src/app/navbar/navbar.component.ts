@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Component({
     selector: 'app-navbar',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
     styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent implements OnInit {
+    public GithubAuthUrl: string =
+        environment.apiBaseUrl + 'v1/login/github-auth';
+
     // TODO: refactor theme switch to new settings service
     private isLightTheme: boolean = true;
     // TODO: fix dirty solution for icon switch
