@@ -20,10 +20,10 @@ export class NavbarComponent implements OnInit {
     setTheme(): void {
         if (this.isLightTheme) {
             document.body.setAttribute('data-theme', 'light');
-            this.themeIcon = this.lightThemeIcon;
+            this.themeIcon = this.darkThemeIcon;
         } else {
             document.body.setAttribute('data-theme', 'dark');
-            this.themeIcon = this.darkThemeIcon;
+            this.themeIcon = this.lightThemeIcon;
         }
     }
 
