@@ -12,6 +12,12 @@ If you want to contribute check out the guidelines:
 The project is inspired by the real [advent of code](https://adventofcode.com/) 
 but aims to be a little bit simpler and more specific for data science students.
 
+## Start local development
+
+```bash
+docker-compose -f docker-compose.dev.yml up -d --build
+```
+
 ## Support
 
 Want to support or help? Here are some possibilities:
