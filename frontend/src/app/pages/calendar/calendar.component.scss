@@ -1,16 +1,16 @@
 a {
   text-decoration: none;
-  color: #000000;
+  color: var(--text-color);
 }
 
 .challenge {
-  background-color: #ffffff;
+  background-color: var(--background-color);
   padding: 1rem;
-  border-bottom: 1px dashed #000000;
+  border-bottom: 1px dashed var(--text-color);
 
   &:hover {
     cursor: pointer;
-    background-color: #f1f1f1;
+    background-color: var(--hover-background-color);
   }
 
   .challenge__title {
@@ -21,7 +21,7 @@ a {
     padding: 0;
 
     span:first-child {
-        color: #e76f51;
+        color: var(--accent-3-color);
     }
 
     .challenge__title--text{
@@ -37,7 +37,7 @@ a {
 
       .challenge__tag {
         padding: 0 0.25rem;
-        color: #2a9d8f;
+        color: var(--primary-color);
       }
     }
   }
