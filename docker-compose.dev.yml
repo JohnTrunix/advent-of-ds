@@ -1,0 +1,58 @@
+version: "3.8"
+name: advent-of-code-dev
+
+networks:
+  backend:
+  frontend:
+
+volumes:
+    postgres_data:
+
+services:
+  postgres:
+    container_name: postgres
+    build:
+      context: ./db/postgres
+      dockerfile: Dockerfile.dev
+    environment:
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres
+        - POSTGRES_DB=aods
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - backend
+    ports:
+        - "5432:5432"
+
+  backend:
+    container_name: backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./backend/app:/code/app
+      - ./backend/tests:/code/tests
+    depends_on:
+      - postgres
+    networks:
+      - backend
+      - frontend
+    ports:
+      - "8000:8000"
+
+  frontend:
+      container_name: frontend
+      build:
+        context: ./frontend
+        dockerfile: Dockerfile.dev
+      volumes:
+          - ./frontend/src:/usr/src/app/src
+      depends_on:
+        - postgres
+        - backend
+      networks:
+        - frontend
+      ports:
+        - "80:80"
+

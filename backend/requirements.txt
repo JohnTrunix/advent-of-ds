@@ -1,12 +1,13 @@
 uvicorn[standard]~=0.24.0
 fastapi~=0.105.0
 sqlalchemy~=2.0.23
-psycopg2~=2.9.9
+psycopg2-binary~=2.9.9
 httpx~=0.26.0
 pydantic-settings~=2.1.0
 python-dotenv~=1.0.0
 
 # testing
+watchfiles ~= 0.21.0
 pytest~=7.4.3
 pytest-cov~=4.1.0
 

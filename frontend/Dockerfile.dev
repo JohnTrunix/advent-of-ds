@@ -1,0 +1,14 @@
+FROM node:18.17
+
+WORKDIR /usr/src/app
+
+RUN npm install -g @angular/cli@17.0.6
+RUN ng analytics disable --global
+
+COPY package.json package-lock.json ./
+RUN npm install
+
+COPY . .
+
+EXPOSE 80
+CMD ["ng", "serve", "--host", "0.0.0.0", "--port", "80", "--poll", "1000"]

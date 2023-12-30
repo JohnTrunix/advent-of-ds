@@ -13,10 +13,6 @@ class Tags(Enum):
     login = "login"
 
 
-origins: list[str] = [
-    "http://localhost:4200",
-]
-
 app: FastAPI = FastAPI(
     title="Advent of Data Science",
     description="Backend for the Advent of Data Science (AoDS) challenge.",
@@ -30,8 +26,8 @@ app: FastAPI = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
-    allow_methods=["GET"],
+    allow_origins=["*"],
+    allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
 
