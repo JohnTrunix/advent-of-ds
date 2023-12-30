@@ -4,8 +4,7 @@ import httpx
 from fastapi import APIRouter, Depends
 from starlette.responses import RedirectResponse
 
-from app.config import Settings
-from app.dependencies import get_settings
+from app.config import Settings, get_settings
 
 router: APIRouter = APIRouter(prefix="/login")
 
