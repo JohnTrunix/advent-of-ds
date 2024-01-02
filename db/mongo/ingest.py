@@ -45,7 +45,9 @@ def convert_md_to_html(file_content: frontmatter.Post) -> str:
     :param file_content: markdown file as a string
     :return: html as a string
     """
-    return markdown.markdown(file_content.content)
+    return markdown.markdown(
+        file_content.content, extensions=["pymdownx.superfences"]
+    )
 
 
 if __name__ == "__main__":
@@ -81,12 +83,12 @@ if __name__ == "__main__":
                 json.dump(metadata, f)
 
         # insert into mongo
-        mongo_collection.insert_one(
-            {
-                "title": metadata["title"],
-                "author": metadata["author"],
-                "tags": metadata["tags"],
-                "date": metadata["date"],
-                "content": html,
-            }
-        )
+        # mongo_collection.insert_one(
+        #     {
+        #         "title": metadata["title"],
+        #         "author": metadata["author"],
+        #         "tags": metadata["tags"],
+        #         "date": metadata["date"],
+        #         "content": html,
+        #     }
+        # )
