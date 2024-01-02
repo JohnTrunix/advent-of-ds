@@ -7,6 +7,8 @@ date: 2024-12-31
 
 # Code Snippets
 
+## Python
+
 ```python
 def hello() -> str:
     return "hello World"
@@ -14,6 +16,16 @@ def hello() -> str:
 print("test")
 ```
 
+## Javascript
+
 ```javascript
 console.log("test")
+```
+
+## CSS
+
+```css
+body {
+    background-color: red;
+}
 ```

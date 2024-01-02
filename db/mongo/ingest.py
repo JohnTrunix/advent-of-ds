@@ -45,22 +45,21 @@ def convert_md_to_html(file_content: frontmatter.Post) -> str:
     :param file_content: markdown file as a string
     :return: html as a string
     """
-    return markdown.markdown(
-        file_content.content, extensions=["pymdownx.superfences"]
-    )
+    extensions = ["pymdownx.superfences", "pymdownx.highlight"]
+    md_renderer = markdown.Markdown(extensions=extensions)
+    return md_renderer.convert(file_content.content)
 
 
 if __name__ == "__main__":
     load_dotenv()
-    DEBUG: bool = True
+    DEBUG: bool = False
     MD_DIR: str = "mocking"
     MONGO_URI: str = os.getenv("MONGO_URI")
-    MONGO_DB: str = "aods"
-    MONGO_COLLECTION: str = "challenges"
+    MONGO_DB: str = os.getenv("MONGO_DB")
+    MONGO_COLLECTION: str = os.getenv("MONGO_COLLECTION")
 
     mongo_client = pymongo.MongoClient(MONGO_URI)
-    mongo_db = mongo_client[MONGO_DB]
-    mongo_collection = mongo_db[MONGO_COLLECTION]
+    mongo_collection = mongo_client[MONGO_DB][MONGO_COLLECTION]
 
     path = Path(MD_DIR)
     md_files = load_md_dir(path)
@@ -83,12 +82,13 @@ if __name__ == "__main__":
                 json.dump(metadata, f)
 
         # insert into mongo
-        # mongo_collection.insert_one(
-        #     {
-        #         "title": metadata["title"],
-        #         "author": metadata["author"],
-        #         "tags": metadata["tags"],
-        #         "date": metadata["date"],
-        #         "content": html,
-        #     }
-        # )
+        if not DEBUG:
+            mongo_collection.insert_one(
+                {
+                    "title": metadata["title"],
+                    "author": metadata["author"],
+                    "tags": metadata["tags"],
+                    "date": str(metadata["date"]),
+                    "content": html,
+                }
+            )
