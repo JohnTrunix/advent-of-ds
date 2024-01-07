@@ -4,7 +4,6 @@ from pathlib import Path
 
 import frontmatter
 import markdown
-import pymongo
 from dotenv import load_dotenv
 
 
@@ -50,16 +49,31 @@ def convert_md_to_html(file_content: frontmatter.Post) -> str:
     return md_renderer.convert(file_content.content)
 
 
+def debug_render(md_file: Path, metadata: dict, html: str) -> None:
+    """
+    Debug md renderer and create output files in /output/*.html/json format
+
+    :param md_file: Path to md file
+    :param metadata: metadata of the file as a dict
+    :param html: rendered html content
+    :return: none
+    """
+    with open(
+            os.path.join(path, "output", md_file.stem + ".html"), "w"
+    ) as f:
+        f.write(html)
+
+    metadata["open_at"] = str(metadata["open_at"])
+    with open(
+            os.path.join(path, "output", md_file.stem + ".json"), "w"
+    ) as f:
+        json.dump(metadata, f)
+
+
 if __name__ == "__main__":
     load_dotenv()
-    DEBUG: bool = False
+    DEBUG: bool = True
     MD_DIR: str = "mocking"
-    MONGO_URI: str = os.getenv("MONGO_URI")
-    MONGO_DB: str = os.getenv("MONGO_DB")
-    MONGO_COLLECTION: str = os.getenv("MONGO_COLLECTION")
-
-    mongo_client = pymongo.MongoClient(MONGO_URI)
-    mongo_collection = mongo_client[MONGO_DB][MONGO_COLLECTION]
 
     path = Path(MD_DIR)
     md_files = load_md_dir(path)
@@ -70,25 +84,4 @@ if __name__ == "__main__":
 
         # debug: write to path/html
         if DEBUG:
-            with open(
-                os.path.join(path, "output", md_file.stem + ".html"), "w"
-            ) as f:
-                f.write(html)
-
-            metadata["date"] = str(metadata["date"])
-            with open(
-                os.path.join(path, "output", md_file.stem + ".json"), "w"
-            ) as f:
-                json.dump(metadata, f)
-
-        # insert into mongo
-        if not DEBUG:
-            mongo_collection.insert_one(
-                {
-                    "title": metadata["title"],
-                    "author": metadata["author"],
-                    "tags": metadata["tags"],
-                    "date": str(metadata["date"]),
-                    "content": html,
-                }
-            )
+            debug_render(md_file, metadata, html)
