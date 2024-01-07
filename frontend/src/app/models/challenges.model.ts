@@ -6,3 +6,7 @@ export interface ChallengeModel {
     open_at: Date;
     created_by: string;
 }
+
+export interface ChallengeDetailsModel extends ChallengeModel {
+    content: string;
+}

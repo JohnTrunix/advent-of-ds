@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { ChallengeModel } from '../../models/challenges.model';
+import { ChallengeDetailsModel } from '../../models/challenges.model';
 import { ChallengesService } from '../../services/api/challenges.service';
 
 @Component({
@@ -11,13 +11,14 @@ import { ChallengesService } from '../../services/api/challenges.service';
 })
 export class ChallengeComponent implements OnInit {
     uuid: string | null = null;
-    challenge: ChallengeModel = {
+    challenge: ChallengeDetailsModel = {
         uuid: '',
         day_id: -100,
         title: '',
         tags: [],
         open_at: new Date(),
         created_by: '',
+        content: '',
     };
 
     constructor(
