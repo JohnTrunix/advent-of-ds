@@ -1,4 +1,4 @@
 .idea/
 .env
 
-db/mongo/mocking/output/
+db/postgres/mocking/output/
