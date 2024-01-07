@@ -22,3 +22,53 @@
       }
     }
   }
+
+:host ::ng-deep .challenge-content {
+  margin-top: 2rem;
+
+  h2 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+  }
+
+  code {
+    padding: 0.125rem;
+    border-radius: 0.25rem;
+    background-color: var(--accent-2-color);
+    color: var(--text-color);
+  }
+
+  div.highlight {
+    width: 100%;
+    padding: 0.125rem 0.125rem 0.125rem 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--accent-2-color);
+    color: var(--text-color);
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 1rem 0 2rem 0;
+    font-size: 0.9rem;
+
+    th {
+      text-align: left;
+      padding: 0.25rem 0.5rem;
+      border: 1px solid #e5e5e5;
+    }
+
+    td {
+      padding: 0.25rem 0.5rem;
+      border: 1px solid #e5e5e5;
+    }
+  }
+}
