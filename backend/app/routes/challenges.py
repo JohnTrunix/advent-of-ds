@@ -9,7 +9,7 @@ router: APIRouter = APIRouter(
 )
 
 
-@router.get("", response_model=list[schema.Challenge])
+@router.get("", response_model=list[schema.Challenges])
 def get_challenges(db: Session = Depends(get_db)):
     challenges = crud.get_challenges(db)
     return challenges
