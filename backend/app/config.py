@@ -19,8 +19,7 @@ class Settings(BaseSettings):
     OAUTH_TOKEN_URL: str = os.getenv("OAUTH_TOKEN_URL") or "token_url"
     OAUTH_REDIRECT_URL: str = os.getenv("OAUTH_REDIRECT_URL") or "redirect_url"
     POSTGRES_URL: str = (
-        os.getenv("POSTGRES_URL")
-        or "postgresql://user:password@postgres/aods"
+        os.getenv("POSTGRES_URL") or "postgresql://user:password@postgres/aods"
     )
 
 
