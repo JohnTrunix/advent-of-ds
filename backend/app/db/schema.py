@@ -11,6 +11,7 @@ class Challenge(BaseModel):
     tags: list[str]
     open_at: datetime
     created_by: str
+    content: str
 
     class ConfigDict:
         from_attributes = True

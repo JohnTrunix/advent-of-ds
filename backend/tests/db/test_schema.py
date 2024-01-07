@@ -12,6 +12,7 @@ def test_challenge():
         tags=["test", "challenge"],
         open_at=datetime.now(),
         created_by="test",
+        content="<h1>Test Challenge</h1>",
     )
     assert challenge.uuid
     assert challenge.day_id == 1
@@ -19,6 +20,7 @@ def test_challenge():
     assert challenge.tags == ["test", "challenge"]
     assert challenge.open_at
     assert challenge.created_by == "test"
+    assert challenge.content == "<h1>Test Challenge</h1>"
     assert challenge.ConfigDict.from_attributes
 
 
