@@ -6,9 +6,9 @@ open_at: 2024-12-04
 created_by: Hans Muster
 ---
 
-# Code Snippets
+## Code Snippets
 
-## Python
+### Python
 
 ```python
 def hello() -> str:
@@ -17,13 +17,13 @@ def hello() -> str:
 print("test")
 ```
 
-## Javascript
+### Javascript
 
 ```javascript
 console.log("test")
 ```
 
-## CSS
+### CSS
 
 ```css
 body {
