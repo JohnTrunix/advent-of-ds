@@ -16,7 +16,7 @@ def convert_md_to_html(file_content: frontmatter.Post) -> str:
     :param file_content: markdown file as a string
     :return: html as a string
     """
-    extensions = ["pymdownx.superfences", "pymdownx.highlight"]
+    extensions = ["tables", "pymdownx.superfences", "pymdownx.highlight"]
     md_renderer = markdown.Markdown(extensions=extensions)
     return md_renderer.convert(file_content.content)
 
