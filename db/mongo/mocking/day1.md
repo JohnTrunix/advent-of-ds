@@ -1,8 +1,9 @@
 ---
+day_id: 1
 title: Day 1
-author: John Doe
 tags: [math]
-date: 2024-12-01
+open_at: 2024-12-01
+created_by: John Doe
 ---
 
 ## Advent of Code - Day 1

@@ -1,8 +1,9 @@
 ---
-title: Test file
-author: John Doe
+day_id: 4
+title: Day 4
 tags: []
-date: 2024-12-31
+open_at: 2024-12-04
+created_by: Hans Muster
 ---
 
 # Code Snippets

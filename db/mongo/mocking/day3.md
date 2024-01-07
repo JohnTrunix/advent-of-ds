@@ -1,8 +1,9 @@
 ---
+day_id: 3
 title: Day 3
-author: Alice Doe
 tags: [viz]
-date: 2024-12-03
+open_at: 2024-12-03
+created_by: Alice Doe
 ---
 
 ## Advent of Code - Day 3

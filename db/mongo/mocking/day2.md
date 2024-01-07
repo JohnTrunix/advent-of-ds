@@ -1,8 +1,9 @@
 ---
+day_id: 2
 title: Day 2
-author: John Doe
 tags: [statistics, math]
-date: 2024-12-02
+open_at: 2024-12-02
+created_by: John Doe
 ---
 
 ## Advent of Code - Day 2
