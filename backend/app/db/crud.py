@@ -4,8 +4,19 @@ from sqlalchemy.orm import Session
 from app.db import orm, schema
 
 
-def get_challenges(db: Session) -> list[schema.Challenge]:
-    result = db.query(orm.Challenge).order_by(orm.Challenge.day_id).all()
+def get_challenges(db: Session) -> list[schema.Challenges]:
+    result = (
+        db.query(
+            orm.Challenge.uuid,
+            orm.Challenge.day_id,
+            orm.Challenge.title,
+            orm.Challenge.tags,
+            orm.Challenge.open_at,
+            orm.Challenge.created_by,
+        )
+        .order_by(orm.Challenge.day_id)
+        .all()
+    )
     return result  # type: ignore
 
 

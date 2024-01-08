@@ -22,6 +22,9 @@ a {
 
     span:first-child {
         color: var(--accent-3-color);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .challenge__title--text{

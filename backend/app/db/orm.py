@@ -1,5 +1,5 @@
 from sqlalchemy import BOOLEAN, TIMESTAMP, ForeignKey, Integer, Interval, String
-from sqlalchemy.dialects.postgresql import ARRAY, UUID
+from sqlalchemy.dialects.postgresql import ARRAY, TEXT, UUID
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 from sqlalchemy.sql import func
 
@@ -54,6 +54,9 @@ class Challenge(Base):
     tags: Mapped[ARRAY] = mapped_column(ARRAY(String(64)), nullable=False)
     open_at: Mapped[TIMESTAMP] = mapped_column(TIMESTAMP, nullable=False)
     created_by: Mapped[str] = mapped_column(String(255), server_default=None)
+    content: Mapped[str] = mapped_column(
+        TEXT, nullable=True, server_default=None
+    )
 
     def __repr__(self):
         return (
@@ -62,6 +65,7 @@ class Challenge(Base):
             f"tags={self.tags!r}, "
             f"open_at={self.open_at!r}, "
             f"created_by={self.created_by!r})>"
+            f"content={self.content!r})>"
         )
 
 

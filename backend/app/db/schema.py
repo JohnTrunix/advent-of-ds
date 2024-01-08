@@ -4,13 +4,20 @@ from uuid import UUID
 from pydantic import BaseModel
 
 
-class Challenge(BaseModel):
+class Challenges(BaseModel):
     uuid: UUID
     day_id: int
     title: str
     tags: list[str]
     open_at: datetime
     created_by: str
+
+    class ConfigDict:
+        from_attributes = True
+
+
+class Challenge(Challenges):
+    content: str | None
 
     class ConfigDict:
         from_attributes = True

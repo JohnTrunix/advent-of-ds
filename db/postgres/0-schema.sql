@@ -19,7 +19,8 @@ CREATE TABLE IF NOT EXISTS challenges (
     title VARCHAR(255) NOT NULL,
     tags VARCHAR(64)[] NOT NULL,
     open_at TIMESTAMP NOT NULL,
-    created_by VARCHAR(255)
+    created_by VARCHAR(255),
+    content TEXT DEFAULT NULL
 );
 
 -- create submissions table which stores challenge completeness information

@@ -1,4 +1,5 @@
 @import "variables";
+@import "markdown";
 
 [data-theme="light"] {
   --background-color: #{$white};
@@ -29,6 +30,14 @@ body, html {
     font-size: $font-size;
     color: var(--text-color);
     background-color: var(--background-color);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    color: var(--primary-color);
 }
 
 h2 {

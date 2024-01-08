@@ -10,7 +10,10 @@ import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 import { environment } from '../../../environments/environment';
-import { ChallengeModel } from '../../models/challenges.model';
+import {
+    ChallengeModel,
+    ChallengeDetailsModel,
+} from '../../models/challenges.model';
 
 @Injectable({
     providedIn: 'root',
@@ -41,13 +44,17 @@ export class ChallengesService {
     /**
      * Get challenge by uuid
      */
-    getChallenge(uuid: string): Observable<ChallengeModel> {
+    getChallenge(uuid: string): Observable<ChallengeDetailsModel> {
         return this.http
-            .get<ChallengeModel>(
+            .get<ChallengeDetailsModel>(
                 this.challengesUrl + '/' + uuid,
                 this.httpOptions
             )
-            .pipe(catchError(this.handleError<ChallengeModel>('getChallenge')));
+            .pipe(
+                catchError(
+                    this.handleError<ChallengeDetailsModel>('getChallenge')
+                )
+            );
     }
 
     /**
