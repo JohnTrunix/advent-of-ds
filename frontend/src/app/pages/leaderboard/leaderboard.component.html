@@ -4,8 +4,12 @@
         <a
             href="{{ user.profile_url }}"
             target="_blank"
-            class="leaderboard__entry-link"
-            ><span class="leaderboard__entry-name">{{ user.username }}</span></a
+            class="leaderboard__entry-link">
+            <img
+                class="leaderboard__entry-avatar"
+                [src]="user.avatar_url"
+                alt="avatar" />
+            <span class="leaderboard__entry-name">{{ user.username }}</span></a
         >
         <span class="leaderboard__entry-scores">
             <span class="leaderboard__entry-score"> {{ user.score }}x⭐</span>
