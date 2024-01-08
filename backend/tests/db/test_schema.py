@@ -29,6 +29,7 @@ def test_leaderboard():
         user_uuid=uuid4(),
         username="test",
         profile_url="https://example.com",
+        avatar_url="https://example.com",
         score=1,
         mate=1,
         total=2,
@@ -36,6 +37,7 @@ def test_leaderboard():
     assert leaderboard.user_uuid
     assert leaderboard.username == "test"
     assert leaderboard.profile_url == "https://example.com"
+    assert leaderboard.avatar_url == "https://example.com"
     assert leaderboard.score == 1
     assert leaderboard.mate == 1
     assert leaderboard.total == 2
