@@ -5,8 +5,8 @@
 
   &__entry {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     padding: 0.5rem 1rem;
     border-bottom: 1px solid #ccc;
 
@@ -18,7 +18,24 @@
       background-color: var(--hover-background-color);
     }
 
+    &-avatar {
+      width: 2rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &-name {
+      margin: 0;
+    }
+
     &-link {
+      display: flex;
+      align-items: center;
       color: inherit;
       text-decoration: none;
 

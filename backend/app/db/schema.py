@@ -27,6 +27,7 @@ class Leaderboard(BaseModel):
     user_uuid: UUID
     username: str
     profile_url: str
+    avatar_url: str
     score: int
     mate: int
     total: int
