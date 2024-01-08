@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { environment } from '../../environments/environment';
 
 import { ThemeService } from '../services/theme.service';
 
@@ -9,8 +8,5 @@ import { ThemeService } from '../services/theme.service';
     styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-    public GithubAuthUrl: string =
-        environment.apiBaseUrl + 'v1/login/github-auth';
-
     constructor(public themeService: ThemeService) {}
 }

@@ -34,3 +34,23 @@ class Leaderboard(BaseModel):
 
     class ConfigDict:
         from_attributes = True
+
+
+class User(BaseModel):
+    username: str
+    email: str
+    avatar_url: str
+    profile_url: str
+    oauth_token: str
+
+    class ConfigDict:
+        from_attributes = True
+
+
+class UserCreate(User):
+    github_id: str
+
+
+class UserRead(User):
+    uuid: UUID
+    github_id: str

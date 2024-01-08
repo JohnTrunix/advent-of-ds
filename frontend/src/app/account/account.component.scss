@@ -1,0 +1,9 @@
+a {
+  text-decoration: none;
+  color: var(--text-color);
+
+  &:hover, &.active {
+    color: inherit;
+    border-bottom: 2px solid var(--text-color);
+  }
+}

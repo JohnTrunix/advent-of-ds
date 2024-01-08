@@ -12,6 +12,7 @@ import { CalendarComponent } from './pages/calendar/calendar.component';
 import { ChallengeComponent } from './pages/challenge/challenge.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { NgOptimizedImage } from '@angular/common';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
     declarations: [
@@ -23,6 +24,7 @@ import { NgOptimizedImage } from '@angular/common';
         CalendarComponent,
         ChallengeComponent,
         PageNotFoundComponent,
+        AccountComponent,
     ],
     imports: [
         BrowserModule,
