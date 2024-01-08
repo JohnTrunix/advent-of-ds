@@ -4,6 +4,7 @@ WITH ranked_submissions AS (
         user_uuid,
         username,
         profile_url,
+        avatar_url,
         task_1,
         task_2,
         duration,
@@ -18,17 +19,19 @@ intermediate_sums AS (
         user_uuid,
         username,
         profile_url,
+        avatar_url,
         SUM(CASE WHEN task_1 THEN 1 ELSE 0 END + CASE WHEN task_2 THEN 1 ELSE 0 END) AS score,
         SUM(CASE WHEN duration_rank = 1 THEN 1 ELSE 0 END) AS mate
     FROM
         ranked_submissions
     GROUP BY
-        user_uuid, username, profile_url
+        user_uuid, username, profile_url, avatar_url
 )
 SELECT
     user_uuid,
     username,
     profile_url,
+    avatar_url,
     score,
     mate,
     score + mate AS total
