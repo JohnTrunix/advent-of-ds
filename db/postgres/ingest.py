@@ -63,11 +63,11 @@ def debug_render(md_file: Path, metadata: dict, html: str) -> None:
     :param html: rendered html content
     :return: none
     """
-    with open(os.path.join(path, "output", md_file.stem + ".html"), "w") as f:
+    with open(os.path.join(PATH, "output", md_file.stem + ".html"), "w+") as f:
         f.write(html)
 
     metadata["open_at"] = str(metadata["open_at"])
-    with open(os.path.join(path, "output", md_file.stem + ".json"), "w") as f:
+    with open(os.path.join(PATH, "output", md_file.stem + ".json"), "w+") as f:
         json.dump(metadata, f)
 
 
@@ -79,13 +79,14 @@ if __name__ == "__main__":
     POSTGRES_URL: str = os.getenv("POSTGRES_URL")  # type: ignore
     ENGINE: Engine = create_engine(POSTGRES_URL)
 
-    path: Path = Path(MD_DIR)
-    md_files: list[Path] = list(path.glob("*.md"))
+    PATH: Path = Path(MD_DIR)
+    md_files: list[Path] = list(PATH.glob("*.md"))
     for md_file in md_files:
         md: frontmatter.Post = frontmatter.load(md_file)
         metadata: dict = md.metadata
         html: str = convert_md_to_html(md)
 
         if DEBUG:
+            Path(PATH, "output").mkdir(parents=True, exist_ok=True)
             debug_render(md_file, metadata, html)
         insert_into_postgres(metadata, html)
