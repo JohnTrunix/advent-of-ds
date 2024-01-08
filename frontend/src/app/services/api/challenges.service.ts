@@ -10,7 +10,10 @@ import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 import { environment } from '../../../environments/environment';
-import { ChallengeModel, ChallengeDetailsModel } from '../../models/challenges.model';
+import {
+    ChallengeModel,
+    ChallengeDetailsModel,
+} from '../../models/challenges.model';
 
 @Injectable({
     providedIn: 'root',
@@ -47,7 +50,11 @@ export class ChallengesService {
                 this.challengesUrl + '/' + uuid,
                 this.httpOptions
             )
-            .pipe(catchError(this.handleError<ChallengeDetailsModel>('getChallenge')));
+            .pipe(
+                catchError(
+                    this.handleError<ChallengeDetailsModel>('getChallenge')
+                )
+            );
     }
 
     /**
