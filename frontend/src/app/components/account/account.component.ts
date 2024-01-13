@@ -9,4 +9,6 @@ import { environment } from '../../../environments/environment';
 export class AccountComponent {
     public GithubAuthUrl: string =
         environment.apiBaseUrl + 'v1/login/github-auth';
+
+    public isAuthenticated: boolean = true;
 }

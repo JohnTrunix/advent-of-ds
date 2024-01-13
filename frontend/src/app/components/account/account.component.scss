@@ -7,3 +7,15 @@ a {
     border-bottom: 2px solid var(--text-color);
   }
 }
+
+.account {
+  &__avatar {
+    width: 2rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

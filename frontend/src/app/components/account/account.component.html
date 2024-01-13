@@ -1,1 +1,12 @@
-<a [href]="GithubAuthUrl">Login</a>
+<div *ngIf="isAuthenticated; then profile; else login"></div>
+<ng-template #login>
+    <a [href]="GithubAuthUrl">Login</a>
+</ng-template>
+<ng-template #profile>
+    <div class="account">
+        <img
+            class="account__avatar"
+            src="https://picsum.photos/200"
+            alt="profile" />
+    </div>
+</ng-template>
