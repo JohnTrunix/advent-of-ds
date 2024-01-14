@@ -1,12 +1,20 @@
-<div *ngIf="isAuthenticated; then profile; else login"></div>
+<div class="account" *ngIf="isAuthenticated; then profile; else login"></div>
 <ng-template #login>
     <a [href]="GithubAuthUrl">Login</a>
 </ng-template>
 <ng-template #profile>
-    <div class="account">
-        <img
-            class="account__avatar"
-            src="https://picsum.photos/200"
-            alt="profile" />
+    <div class="profile" (mouseleave)="toggleProfileDropdown(false)">
+        <button
+            class="profile__button"
+            (click)="toggleProfileDropdown(true)"
+            [class.selected]="showDropdown">
+            <img
+                class="profile__button__avatar"
+                src="https://picsum.photos/200"
+                alt="profile" />
+        </button>
+        <div *ngIf="showDropdown" class="profile__dropdown">
+            <a class="profile__settings__item" href="/home">Logout</a>
+        </div>
     </div>
 </ng-template>

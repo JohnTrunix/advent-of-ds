@@ -11,4 +11,11 @@ export class AccountComponent {
         environment.apiBaseUrl + 'v1/login/github-auth';
 
     public isAuthenticated: boolean = true;
+    public showDropdown: boolean = false;
+
+    constructor() {}
+
+    public toggleProfileDropdown(shouldShow: boolean): void {
+        this.showDropdown = shouldShow;
+    }
 }
