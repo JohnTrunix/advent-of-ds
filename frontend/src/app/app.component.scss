@@ -1,9 +1,16 @@
-.router-outlet--wrapper {
-  margin: 2rem 20vw;
+.DEV {
+  width: 100%;
+  background-color: #2a9d8f;
+  margin: 0;
+  padding: 0.5rem 0;
+  text-align: center;
 }
 
-.DEV {
-  background-color: #2a9d8f;
-  padding: 0.5rem 1rem;
-  text-align: center;
+app-navbar {
+  width: 100%;
+}
+
+.router-outlet--wrapper {
+  width: 60%;
+  padding: 2.5rem;
 }
