@@ -9,6 +9,7 @@ rules:
   selector-no-qualifying-type: null
   selector-max-compound-selectors: null
   scss/at-extend-no-missing-placeholder: null
+  selector-class-pattern: null # to apply BEM ruleset
   selector-pseudo-element-no-unknown:
     - true
     - ignorePseudoElements: [ ng-deep ]
