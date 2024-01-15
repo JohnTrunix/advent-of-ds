@@ -6,6 +6,8 @@
     "start": "ng serve --configuration development",
     "start:prod": "ng serve --configuration production",
     "lint": "ng lint --fix",
+    "lint:sass": "stylelint **.scss",
+    "lint:all": "npm run lint && npm run lint:sass",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --browsers=ChromeDebug"
@@ -47,6 +49,8 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "prettier": "^3.1.0",
     "prettier-eslint": "^16.1.2",
+    "stylelint": "^16.1.0",
+    "stylelint-config-sass-guidelines": "^11.0.0",
     "typescript": "~5.2.2"
   }
 }
