@@ -1,4 +1,4 @@
-.nav-bar {
+.navbar {
   height: 2rem;
   z-index: 100;
   margin: 0;
@@ -11,7 +11,7 @@
   border-bottom: 1px solid #e5e5e5;
 
 
-  .nav-bar__logo {
+  .navbar__logo {
     font-size: 1.5rem;
     font-weight: bold;
 
@@ -22,13 +22,14 @@
       .logo--first {
         color: var(--secondary-color);
       }
+
       .logo--second {
         color: var(--accent-3-color);
       }
     }
   }
 
-  .nav-bar__links {
+  .navbar__links {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,7 +51,7 @@
     }
   }
 
-  .nav-bar__settings {
+  .navbar__settings {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,7 +59,7 @@
     button {
       height: 100%;
       background: none;
-      border: none;
+      border-style: none;
       cursor: pointer;
       outline: none;
 

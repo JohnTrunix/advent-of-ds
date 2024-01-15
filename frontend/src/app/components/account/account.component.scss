@@ -15,7 +15,7 @@ a {
 
   &__button {
     background: none;
-    border: none;
+    border-style: none;
     outline: none;
 
     &:hover {
@@ -35,7 +35,7 @@ a {
 
     &__button {
       background: none;
-      border: none;
+      border-style: none;
       outline: none;
       color: var(--text-color);
       font-size: 1rem;

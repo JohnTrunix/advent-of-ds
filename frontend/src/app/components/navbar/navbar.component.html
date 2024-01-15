@@ -1,17 +1,17 @@
-<nav class="nav-bar">
-    <div class="nav-bar__logo">
+<nav class="navbar">
+    <div class="navbar__logo">
         <a routerLink="/home" routerLinkActive="active">
             <span class="logo--first">Ao</span>
             <span class="logo--second">DS</span>
         </a>
     </div>
-    <div class="nav-bar__links">
+    <div class="navbar__links">
         <a routerLink="/home" routerLinkActive="active">Home</a>
         <a routerLink="/calendar" routerLinkActive="active">Calendar</a>
         <a routerLink="/leaderboard" routerLinkActive="active">Leaderboard</a>
         <a routerLink="/about" routerLinkActive="active">About</a>
     </div>
-    <div class="nav-bar__settings">
+    <div class="navbar__settings">
         <button (click)="themeService.toggleTheme()">
             <img
                 [attr.src]="themeService.activeThemeIcon"
