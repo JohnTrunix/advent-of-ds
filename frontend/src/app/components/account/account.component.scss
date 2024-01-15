@@ -1,0 +1,52 @@
+a {
+  text-decoration: none;
+  color: var(--text-color);
+
+  &:hover{
+    color: inherit;
+    border-bottom: 2px solid var(--text-color);
+  }
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__button {
+    background: none;
+    border-style: none;
+    outline: none;
+
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    &__avatar {
+      width: 32px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+    }
+  }
+
+  &__dropdown {
+    margin: 0 1rem;
+
+    &__button {
+      background: none;
+      border-style: none;
+      outline: none;
+      color: var(--text-color);
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+
+      &:hover {
+        background: var(--bg-color);
+        cursor: pointer;
+      }
+    }
+  }
+}

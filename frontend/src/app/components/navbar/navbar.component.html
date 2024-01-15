@@ -1,0 +1,22 @@
+<nav class="navbar">
+    <div class="navbar__logo">
+        <a routerLink="/home" routerLinkActive="active">
+            <span class="logo--first">Ao</span>
+            <span class="logo--second">DS</span>
+        </a>
+    </div>
+    <div class="navbar__links">
+        <a routerLink="/home" routerLinkActive="active">Home</a>
+        <a routerLink="/calendar" routerLinkActive="active">Calendar</a>
+        <a routerLink="/leaderboard" routerLinkActive="active">Leaderboard</a>
+        <a routerLink="/about" routerLinkActive="active">About</a>
+    </div>
+    <div class="navbar__settings">
+        <button (click)="themeService.toggleTheme()">
+            <img
+                [attr.src]="themeService.activeThemeIcon"
+                [attr.alt]="themeService.activeTheme" />
+        </button>
+        <app-account></app-account>
+    </div>
+</nav>
